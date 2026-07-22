@@ -211,6 +211,61 @@ main{
   color:var(--ink-soft);
 }
 
+/* ===== 直拍板块 ===== */
+.tab-row{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.tab-btn{
+  flex:1;
+  border:2px solid var(--sky-soft);
+  background:var(--white);
+  color:var(--ink-soft);
+  border-radius:999px;
+  padding:10px 0;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .2s, color .2s, border-color .2s;
+}
+.tab-btn.active{
+  background:var(--butter);
+  border-color:var(--butter);
+  color:var(--ink);
+}
+
+.year-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.year-btn{
+  border:2px solid var(--sky-soft);
+  background:var(--sky-soft);
+  color:var(--ink);
+  border-radius:14px;
+  padding:14px 0;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .2s, transform .15s;
+}
+.year-btn:hover{ background:var(--sky); color:var(--white); transform:translateY(-2px); }
+.year-btn.empty{
+  opacity:.45;
+  cursor:default;
+}
+.year-btn.empty:hover{ background:var(--sky-soft); color:var(--ink); transform:none; }
+
+.fancam-tip{
+  font-size:12px;
+  text-align:center;
+}
+
 footer{
   text-align:center;
   font-size:12px;
