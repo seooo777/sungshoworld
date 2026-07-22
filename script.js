@@ -35,3 +35,62 @@ sparkBtn.addEventListener('click', () => {
   orbit.classList.add('close');
   setTimeout(() => orbit.classList.remove('close'), 600);
 });
+
+// ===== 直拍记录 =====
+// 把B站链接填进对应年份的引号里就行，没有的先留空字符串 ''
+const fancamLinks = {
+  otter: {
+    2020: '',
+    2021: '',
+    2022: '',
+    2023: '',
+    2024: '',
+    2025: '',
+    2026: ''
+  },
+  deer: {
+    2020: '',
+    2021: '',
+    2022: '',
+    2023: '',
+    2024: '',
+    2025: '',
+    2026: ''
+  }
+};
+
+const yearGrid = document.getElementById('year-grid');
+const fancamTip = document.getElementById('fancam-tip');
+const tabBtns = document.querySelectorAll('.tab-btn');
+let currentCat = 'otter';
+
+function renderYears(){
+  yearGrid.innerHTML = '';
+  const years = Object.keys(fancamLinks[currentCat]);
+  years.forEach(year => {
+    const link = fancamLinks[currentCat][year];
+    const btn = document.createElement('button');
+    btn.className = 'year-btn' + (link ? '' : ' empty');
+    btn.textContent = year;
+    btn.addEventListener('click', () => {
+      if(link){
+        window.open(link, '_blank');
+      } else {
+        fancamTip.textContent = year + ' 年暂时还没有链接哦~';
+      }
+    });
+    yearGrid.appendChild(btn);
+  });
+}
+
+tabBtns.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabBtns.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentCat = tab.dataset.cat;
+    fancamTip.textContent = '暂无链接，稍后更新~';
+    renderYears();
+  });
+});
+
+renderYears();
