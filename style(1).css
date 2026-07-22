@@ -1,0 +1,216 @@
+/* ===== 设计变量 ===== */
+:root{
+  --cream:#FFFBF5;
+  --coral:#FF8FA3;      /* 将太郎 主色 */
+  --coral-soft:#FFE5EC;
+  --sky:#6EC3E0;         /* 成灿 主色 */
+  --sky-soft:#E6F5FB;
+  --ink:#4A4453;         /* 正文/标题色，非纯黑 */
+  --ink-soft:#8B8494;
+  --white:#FFFFFF;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Noto Sans SC', sans-serif;
+  min-height:100vh;
+}
+
+.hidden{ display:none !important; }
+
+/* ===== 密码墙 ===== */
+#gate{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(160deg, var(--coral-soft) 0%, var(--sky-soft) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100;
+  padding:24px;
+}
+
+.gate-card{
+  background:var(--white);
+  border-radius:28px;
+  padding:48px 36px;
+  max-width:340px;
+  width:100%;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(74,68,83,0.12);
+}
+
+.gate-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--ink-soft);
+  margin-bottom:8px;
+}
+
+.gate-title{
+  font-family:'ZCOOL KuaiLe', cursive;
+  font-size:32px;
+  color:var(--coral);
+  margin-bottom:6px;
+}
+
+.gate-sub{
+  font-size:14px;
+  color:var(--ink-soft);
+  margin-bottom:24px;
+}
+
+#gate-input{
+  width:100%;
+  border:2px solid var(--coral-soft);
+  border-radius:16px;
+  padding:14px 16px;
+  font-size:16px;
+  text-align:center;
+  outline:none;
+  margin-bottom:14px;
+  transition:border-color .2s;
+}
+#gate-input:focus{ border-color:var(--coral); }
+
+#gate-btn{
+  width:100%;
+  border:none;
+  border-radius:16px;
+  padding:14px;
+  background:var(--coral);
+  color:var(--white);
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .15s, background .2s;
+}
+#gate-btn:hover{ background:#ff7d95; transform:translateY(-1px); }
+
+.gate-error{
+  color:var(--coral);
+  font-size:13px;
+  margin-top:12px;
+  display:none;
+}
+.gate-error.show{ display:block; }
+
+/* ===== Hero ===== */
+.hero{
+  text-align:center;
+  padding:72px 24px 48px;
+}
+
+.hero-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:2px;
+  color:var(--ink-soft);
+  margin-bottom:10px;
+}
+
+.hero-title{
+  font-family:'ZCOOL KuaiLe', cursive;
+  font-size:44px;
+  color:var(--ink);
+  margin-bottom:40px;
+}
+
+.orbit{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  margin-bottom:24px;
+}
+
+.dot{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'ZCOOL KuaiLe', cursive;
+  font-size:16px;
+  color:var(--white);
+  transition:transform .4s ease;
+}
+.dot-a{ background:var(--coral); }
+.dot-b{ background:var(--sky); }
+
+.heart-core{
+  font-size:22px;
+  color:var(--ink-soft);
+  transition:color .4s, transform .4s;
+}
+
+.orbit.close .dot-a{ transform:translateX(18px); }
+.orbit.close .dot-b{ transform:translateX(-18px); }
+.orbit.close .heart-core{ color:var(--coral); transform:scale(1.4); }
+
+#spark-btn{
+  border:2px solid var(--coral);
+  background:var(--white);
+  color:var(--coral);
+  border-radius:999px;
+  padding:10px 26px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .2s, color .2s;
+}
+#spark-btn:hover{ background:var(--coral); color:var(--white); }
+
+.spark-count{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--ink-soft);
+}
+#spark-num{ color:var(--coral); font-weight:700; }
+
+/* ===== 内容板块 ===== */
+main{
+  max-width:640px;
+  margin:0 auto;
+  padding:0 24px 80px;
+}
+
+.block{
+  background:var(--white);
+  border-radius:24px;
+  padding:36px 28px;
+  margin-bottom:28px;
+  box-shadow:0 12px 32px rgba(74,68,83,0.06);
+}
+
+.block-eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:2px;
+  color:var(--sky);
+  margin-bottom:8px;
+}
+
+.block h2{
+  font-family:'ZCOOL KuaiLe', cursive;
+  font-size:24px;
+  color:var(--ink);
+  margin-bottom:14px;
+}
+
+.block-placeholder{
+  font-size:14px;
+  color:var(--ink-soft);
+}
+
+footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--ink-soft);
+  padding-bottom:40px;
+}

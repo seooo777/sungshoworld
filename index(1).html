@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sungsho world</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 密码墙 -->
+  <div id="gate">
+    <div class="gate-card">
+      <p class="gate-eyebrow">MAGNET LOCK</p>
+      <h1 class="gate-title">sungsho world</h1>
+      <p class="gate-sub">请输入密码进入</p>
+      <input type="password" id="gate-input" placeholder="••••" inputmode="numeric">
+      <button id="gate-btn">进 入</button>
+      <p class="gate-error" id="gate-error">密码不对哦，再试一次~</p>
+    </div>
+  </div>
+
+  <!-- 正式内容 -->
+  <div id="main" class="hidden">
+
+    <header class="hero">
+      <p class="hero-eyebrow">MAGNETIC PAIR · 磁力配对中</p>
+      <h1 class="hero-title">sungsho world</h1>
+
+      <div class="orbit">
+        <div class="dot dot-a" id="dot-a">将太郎</div>
+        <div class="heart-core" id="heart-core">♡</div>
+        <div class="dot dot-b" id="dot-b">成灿</div>
+      </div>
+
+      <button id="spark-btn">点击靠近一点点</button>
+      <p class="spark-count">已心动 <span id="spark-num">0</span> 次</p>
+    </header>
+
+    <main>
+      <section class="block" id="photos">
+        <p class="block-eyebrow">02 · GALLERY</p>
+        <h2>照片墙</h2>
+        <p class="block-placeholder">照片墙正在布置中，敬请期待 ⋯</p>
+      </section>
+
+      <section class="block" id="profile">
+        <p class="block-eyebrow">01 · FILE</p>
+        <h2>CP档案卡</h2>
+        <p class="block-placeholder">档案卡正在填写中，敬请期待 ⋯</p>
+      </section>
+
+      <section class="block" id="draw">
+        <p class="block-eyebrow">03 · LOTTERY</p>
+        <h2>抽签</h2>
+        <p class="block-placeholder">抽签功能正在准备中，敬请期待 ⋯</p>
+      </section>
+
+      <section class="block" id="wall">
+        <p class="block-eyebrow">04 · WALL</p>
+        <h2>留言板 / 祝福便签</h2>
+        <p class="block-placeholder">留言板正在搭建中，敬请期待 ⋯</p>
+      </section>
+    </main>
+
+    <footer>
+      sungsho world © 2026
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
