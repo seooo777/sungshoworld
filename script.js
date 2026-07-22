@@ -37,10 +37,23 @@ sparkBtn.addEventListener('click', () => {
 });
 
 // ===== 直拍记录 =====
+const fancamCard = document.getElementById('fancam-card');
+const fancamPage = document.getElementById('fancam-page');
+const fancamBack = document.getElementById('fancam-back');
+
+fancamCard.addEventListener('click', () => {
+  fancamPage.classList.remove('hidden');
+  window.scrollTo(0, 0);
+});
+
+fancamBack.addEventListener('click', () => {
+  fancamPage.classList.add('hidden');
+});
+
 // 把B站链接填进对应年份的引号里就行，没有的先留空字符串 ''
 const fancamLinks = {
   otter: {
-    2020: '',
+    2020: 'https://b23.tv/AHXMmXK',
     2021: '',
     2022: '',
     2023: '',
