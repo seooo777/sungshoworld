@@ -58,18 +58,10 @@
         <p class="block-placeholder">抽签功能正在准备中，敬请期待 ⋯</p >
       </section>
 
-      <section class="block" id="fancam">
+      <section class="block block-link" id="fancam-card">
         <p class="block-eyebrow">05 · FANCAM</p >
         <h2>直拍记录</h2>
-
-        <div class="tab-row">
-          <button class="tab-btn active" data-cat="otter">小獭</button>
-          <button class="tab-btn" data-cat="deer">小鹿</button>
-        </div>
-
-        <div class="year-grid" id="year-grid"></div>
-
-        <p class="block-placeholder fancam-tip" id="fancam-tip">暂无链接，稍后更新~</p >
+        <p class="block-placeholder">点击查看分类直拍 →</p >
       </section>
 
       <section class="block" id="wall">
@@ -82,6 +74,23 @@
     <footer>
       sungsho world © 2026
     </footer>
+  </div>
+
+  <!-- 直拍记录 · 独立子页面 -->
+  <div id="fancam-page" class="hidden">
+    <button class="back-btn" id="fancam-back">← 返回</button>
+
+    <p class="hero-eyebrow" style="text-align:center;">05 · FANCAM</p >
+    <h2 class="page-title">直拍记录</h2>
+
+    <div class="tab-row">
+      <button class="tab-btn active" data-cat="otter">小獭</button>
+      <button class="tab-btn" data-cat="deer">小鹿</button>
+    </div>
+
+    <div class="year-grid" id="year-grid"></div>
+
+    <p class="block-placeholder fancam-tip" id="fancam-tip">暂无链接，稍后更新~</p >
   </div>
 
   <script src="script.js"></script>
