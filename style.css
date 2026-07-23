@@ -301,13 +301,45 @@ main{
 .year-btn:hover{ background:var(--sky); color:var(--white); transform:translateY(-2px); }
 .year-btn.empty{
   opacity:.45;
-  cursor:default;
 }
 .year-btn.empty:hover{ background:var(--sky-soft); color:var(--ink); transform:none; }
 
 .fancam-tip{
   font-size:12px;
   text-align:center;
+}
+
+.fancam-list{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px;
+  max-width:480px;
+  margin:0 auto 16px;
+}
+
+.fancam-card{
+  background:var(--white);
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(74,85,104,0.08);
+  transition:transform .15s;
+}
+.fancam-card:hover{ transform:translateY(-3px); }
+
+.fancam-cover{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:var(--sky-soft);
+  display:block;
+}
+
+.fancam-card-title{
+  font-size:12px;
+  color:var(--ink);
+  padding:8px 10px;
+  font-weight:700;
 }
 
 footer{
