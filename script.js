@@ -56,7 +56,7 @@ let currentYear = null;
 // cover 填封面图片链接，link 填B站视频链接，title 随便写一句话
 const fancamData = {
   otter: {
-    2020: [{title:'make a wish',cover:'http://p.q2f.cn/2nW1RA',link:'https://b23.tv/AHXMmXK'}],
+    2020: [{title:'make a wish',cover:'sho1',link:'https://b23.tv/AHXMmXK'}],
     2021: [],
     2022: [],
     2023: [],
