@@ -81,16 +81,20 @@
     <button class="back-btn" id="fancam-back">← 返回</button>
 
     <p class="hero-eyebrow" style="text-align:center;">05 · FANCAM</p >
-    <h2 class="page-title">直拍记录</h2>
+    <h2 class="page-title" id="fancam-page-title">直拍记录</h2>
 
-    <div class="tab-row">
-      <button class="tab-btn active" data-cat="otter">小獭</button>
-      <button class="tab-btn" data-cat="deer">小鹿</button>
+    <div id="fancam-years-view">
+      <div class="tab-row">
+        <button class="tab-btn active" data-cat="otter">小獭</button>
+        <button class="tab-btn" data-cat="deer">小鹿</button>
+      </div>
+      <div class="year-grid" id="year-grid"></div>
     </div>
 
-    <div class="year-grid" id="year-grid"></div>
-
-    <p class="block-placeholder fancam-tip" id="fancam-tip">暂无链接，稍后更新~</p >
+    <div id="fancam-list-view" class="hidden">
+      <div class="fancam-list" id="fancam-list"></div>
+      <p class="block-placeholder fancam-tip" id="fancam-empty-tip">还没有直拍，稍后更新~</p >
+    </div>
   </div>
 
   <script src="script.js"></script>
